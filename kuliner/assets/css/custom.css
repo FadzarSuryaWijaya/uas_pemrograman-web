@@ -1,0 +1,235 @@
+/* Custom CSS to enhance Bootstrap 5 */
+:root {
+    --primary-color: #1877F2;  /* Biru utama Facebook */
+    --secondary-color: #1C69D4; /* Biru gelap elegan */
+    --accent-color: #42B0F5; /* Biru muda untuk aksen */
+    --light-gray: #f8f9fa;
+}
+
+.main-content {
+    padding-top: 30px; /* Sesuaikan dengan tinggi navbar Anda */
+}
+
+/* Navbar Styling */
+.custom-navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    background: var(--light-gray);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.navbar-brand {
+    color: var(--primary-color) ;
+}
+
+.navbar-brand:hover {
+    background: var(--light-gray);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative; /* Membuat posisi relatif untuk overlay */
+    background-size: cover; /* Gambar memenuhi area */
+    background-position: center; /* Gambar diatur di tengah */
+    height: 100vh; /* Tinggi penuh viewport */
+    color: white; /* Warna teks */
+    display: flex; /* Untuk posisi teks */
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan transparansi 50% */
+    z-index: 1; /* Overlay berada di bawah teks */
+}
+
+.hero-section .container {
+    position: relative; /* Posisi relatif agar berada di atas overlay */
+    z-index: 2; /* Teks berada di atas overlay */
+    text-align: center; /* Teks rata tengah */
+}
+
+
+/* Card Styling */
+.custom-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.custom-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.custom-card .card-body {
+    padding: 1.5rem;
+}
+
+/* Form Styling */
+.custom-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-form .form-control {
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e1e1e1;
+}
+
+.custom-form .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+}
+
+/* Table Styling */
+.custom-table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-table thead {
+    background: var(--primary-color);
+    color: white;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+/* Button Styling */
+.custom-button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.custom-button-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.custom-button-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Footer Styling */
+.custom-footer {
+    background: var(--accent-color);
+    color: white;
+    padding: 3rem 0;
+}
+
+.custom-footer h5 {
+    color: var(--light-gray);
+    margin-bottom: 1.5rem;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Modal Styling */
+.custom-modal .modal-content {
+    background-color: white; /* Modal background color */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.custom-modal .modal-header {
+    background-color: var(--primary-color);
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.custom-modal .modal-header .btn-close {
+    color: white;
+}
+
+.custom-modal .modal-body {
+    padding: 2rem;
+    color: var(--primary-color);
+}
+
+.custom-modal .modal-body img {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.custom-modal .modal-footer {
+    background-color: #f8f9fa;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top: 1px solid #e1e1e1;
+}
+
+.custom-modal .modal-footer .btn-secondary {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.custom-modal .modal-footer .btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Animation */
+.custom-modal .modal.fade {
+    animation: fadeIn 0.5s ease-in;
+}

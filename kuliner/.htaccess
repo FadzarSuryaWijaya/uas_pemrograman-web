@@ -1,0 +1,8 @@
+# Mengaktifkan mod_rewrite
+RewriteEngine On
+
+# Menonaktifkan directory listing (jika tidak ada file index)
+Options -Indexes
+
+# Menangani error 404 dan mengarahkannya ke 404.php di folder views
+ErrorDocument 404 /kuliner/views/404.php
